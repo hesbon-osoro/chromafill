@@ -1,0 +1,94 @@
+.pattern-editor {
+  margin-top: 20px;
+}
+
+.pattern-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.pattern-option {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pattern-option:hover {
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+.pattern-option.active {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+}
+
+.pattern-preview {
+  width: 100%;
+  height: 80px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Stripes pattern - FIXED */
+.pattern-stripes {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 10px,
+    var(--pattern-color, #6366f1) 10px,
+    var(--pattern-color, #6366f1) 20px
+  );
+}
+
+/* Dots pattern */
+/* .pattern-dots {
+  background: radial-gradient(
+    circle, 
+    var(--pattern-color, #6366f1) 2px, 
+    transparent 2px
+  );
+  background-size: 20px 20px;
+} */
+.pattern-dots {
+  background-image: radial-gradient(
+    circle at center,
+    var(--pattern-color, #6366f1) 20%,
+    transparent 20%
+  );
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+/* Grid pattern */
+.pattern-grid {
+  background:
+    linear-gradient(
+      to right,
+      var(--pattern-color, #6366f1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--pattern-color, #6366f1) 1px,
+      transparent 1px
+    );
+  background-size: 20px 20px;
+}
+
+.selected-pattern-info {
+  padding: 10px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.selected-pattern-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}

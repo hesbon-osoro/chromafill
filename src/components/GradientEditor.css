@@ -1,0 +1,94 @@
+.gradient-editor {
+  margin-top: 20px;
+}
+
+.gradient-preview {
+  height: 80px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.control-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.control-group select,
+.control-group input[type='range'] {
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.gradient-stops {
+  margin: 15px 0;
+}
+
+.gradient-stop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.gradient-stop input[type='color'] {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.gradient-stop input[type='range'] {
+  flex: 1;
+}
+
+.gradient-stop span {
+  min-width: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.remove-stop-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-stop-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.add-stop-btn {
+  padding: 10px 15px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.add-stop-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}

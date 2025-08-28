@@ -1,0 +1,98 @@
+.demo-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.demo-thumb {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.demo-thumb:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.demo-thumb-img {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  overflow: hidden;
+}
+
+/* Subject preview */
+.subject-preview {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid var(--subject-color, #6366f1);
+  position: relative;
+}
+
+.subject-preview::after {
+  content: 'Sample';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.7rem;
+  color: var(--subject-color, #6366f1);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Pattern previews */
+.pattern-preview {
+  width: 100%;
+  height: 100%;
+}
+
+/* Stripes pattern - FIXED */
+.pattern-stripes {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 10px,
+    var(--pattern-color, #6366f1) 10px,
+    var(--pattern-color, #6366f1) 20px
+  );
+}
+
+.pattern-dots {
+  background: radial-gradient(
+    circle,
+    var(--pattern-color, #6366f1) 2px,
+    transparent 2px
+  );
+  background-size: 20px 20px;
+}
+
+.pattern-grid {
+  background:
+    linear-gradient(
+      to right,
+      var(--pattern-color, #6366f1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--pattern-color, #6366f1) 1px,
+      transparent 1px
+    );
+  background-size: 20px 20px;
+}
+
+.demo-thumb span {
+  display: block;
+  padding: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
