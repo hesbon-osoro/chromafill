@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/chromafill/static/css/main.d2b47376.css",
+    "main.js": "/chromafill/static/js/main.1d55809a.js",
+    "static/js/453.d88280aa.chunk.js": "/chromafill/static/js/453.d88280aa.chunk.js",
+    "index.html": "/chromafill/index.html",
+    "main.d2b47376.css.map": "/chromafill/static/css/main.d2b47376.css.map",
+    "main.1d55809a.js.map": "/chromafill/static/js/main.1d55809a.js.map",
+    "453.d88280aa.chunk.js.map": "/chromafill/static/js/453.d88280aa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2b47376.css",
+    "static/js/main.1d55809a.js"
+  ]
+}
