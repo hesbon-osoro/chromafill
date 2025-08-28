@@ -421,3 +421,17 @@ body {
 .image-controls {
   margin-top: 20px;
 }
+
+/* EyeDropper */
+.eyedropper-btn {
+  padding: 8px 12px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.eyedropper-btn:hover {
+  background: #4f46e5;
+}

@@ -82,4 +82,8 @@ We'd love to see what you create with Chromafill! Share your transformed images 
 
 [![demo3](./public/assets/screenshots/chromafill3.PNG)](https://hesbon-osoro.github.io/chromafill/)
 
+### Eye Dropper feature
+
+[![eyedropper](./public/assets/screenshots/eyedropper.png)](https://hesbon-osoro.github.io/chromafill/)
+
 _Chromafill - Where ordinary images become extraordinary creations._

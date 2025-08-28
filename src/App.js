@@ -95,7 +95,15 @@ function App() {
       link.click();
     }
   };
-
+  const openEyeDropper = async () => {
+    try {
+      const eyeDropper = new window.EyeDropper();
+      const result = await eyeDropper.open();
+      setBackgroundColor(result.sRGBHex);
+    } catch (err) {
+      console.log('EyeDropper selection canceled:', err);
+    }
+  };
   return (
     <div className="App">
       <header className="app-header">
@@ -183,6 +191,32 @@ function App() {
               </button>
             </div>
 
+            {/* {backgroundType === 'color' && (
+              <div className="color-controls">
+                <div className="color-picker-container">
+                  <input
+                    type="color"
+                    value={backgroundColor}
+                    onChange={e => setBackgroundColor(e.target.value)}
+                  />
+                  <div className="slider-container">
+                    <label>
+                      Opacity: {Math.round(backgroundOpacity * 100)}%
+                    </label>
+                    <input
+                      type="range"
+                      min="0"
+                      max="1"
+                      step="0.01"
+                      value={backgroundOpacity}
+                      onChange={e =>
+                        setBackgroundOpacity(parseFloat(e.target.value))
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            )} */}
             {backgroundType === 'color' && (
               <div className="color-controls">
                 <div className="color-picker-container">
@@ -191,6 +225,16 @@ function App() {
                     value={backgroundColor}
                     onChange={e => setBackgroundColor(e.target.value)}
                   />
+                  {/* Add this EyeDropper button */}
+                  {window.EyeDropper && (
+                    <button
+                      className="eyedropper-btn"
+                      onClick={openEyeDropper}
+                      title="Pick color from screen"
+                    >
+                      <i className="fas fa-eyedropper"></i>
+                    </button>
+                  )}
                   <div className="slider-container">
                     <label>
                       Opacity: {Math.round(backgroundOpacity * 100)}%
